@@ -5,9 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>tic tac toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-	<script src="app.js"></script>
+  <body ontouchstart="">
+    <header>
+      <div class="header-border">
+        <h1 class="header">tic ✖ tac ● toe</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="gameboard"></div>
+      <div class="players">
+        <div class="player one">
+          <h3 id="one"></h3>
+        </div>
+        <span class="material-icons md-36 green-marker"> chevron_left </span>
+        <span class="material-icons md-36 blue-marker"> chevron_right </span>
+        <div class="player two">
+          <h3 id="two"></h3>
+        </div>
+      </div>
+      <div class="reset">
+        <h3 class="reset-btn">Reset</h3>
+        <span class="material-icons md-24 exit"> settings </span>
+      </div>
+
+      <div class="modal">
+        <div class="edit-player">
+          <form>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter name"
+              minlength="2"
+              maxlength="7"
+              required
+            />
+            <button type="submit" class="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="start-modal">
+        <div class="start-screen">
+          <div class="selection">
+            <h3>Play against:</h3>
+          </div>
+          <div class="choices">
+            <h3 class="select-player">Player</h3>
+            <h3 class="select-computer">Computer</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="https://github.com/m-kwon/tic-tac-toe">
+        <i class="fab fa-github fa-2x ft-icon"></i>
+      </a>
+    </footer>
+    <script src="app.js"></script>
   </body>
 </html>
